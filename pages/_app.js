@@ -3,6 +3,7 @@ import { ThemeProvider } from "styled-components";
 import { useDarkMode } from "components/hooks/useDarkMode";
 import { GlobalStyles, darkTheme, lightTheme } from "styles/globalStyles";
 import NavBar from "components/NavBar";
+import Footer from "components/Footer";
 function MyApp({ Component, pageProps }) {
   const [open, setOpen] = useState(false);
   const [theme, toggleTheme, componentMounted] = useDarkMode();
@@ -17,9 +18,9 @@ function MyApp({ Component, pageProps }) {
           currentTheme={themeMode}
           open={open}
           setOpen={setOpen}
-        >
-          <Component {...pageProps} />
-        </NavBar>
+        />
+        <Component {...pageProps} />
+        <Footer />
       </ThemeProvider>
     </>
   );
