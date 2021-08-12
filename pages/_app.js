@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { useDarkMode } from "components/hooks/useDarkMode";
 import { GlobalStyles, darkTheme, lightTheme } from "styles/globalStyles";
+import NavBar from "components/NavBar";
 function MyApp({ Component, pageProps }) {
+  const [open, setOpen] = useState(false);
   const [theme, toggleTheme, componentMounted] = useDarkMode();
   const themeMode = theme === "light" ? lightTheme : darkTheme;
 
@@ -9,7 +12,14 @@ function MyApp({ Component, pageProps }) {
     <>
       <ThemeProvider theme={themeMode}>
         <GlobalStyles currentTheme={theme} />
-        <Component {...pageProps} />
+        <NavBar
+          toggleTheme={toggleTheme}
+          currentTheme={themeMode}
+          open={open}
+          setOpen={setOpen}
+        >
+          <Component {...pageProps} />
+        </NavBar>
       </ThemeProvider>
     </>
   );
