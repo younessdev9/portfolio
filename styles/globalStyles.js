@@ -65,7 +65,26 @@ export const GlobalStyles = createGlobalStyle`
       color : inherit;
     }
   }
-  
+  @font-face {
+    font-family: "Wotfard";
+    src: url("/fonts/Wotfard-Regular.ttf");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Wotfard";
+    src: url("/fonts/Wotfard-Medium.ttf");
+    font-style: medium;
+    font-weight: 500;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "Wotfard";
+    src: url("/fonts/Wotfard-SemiBold.ttf");
+    font-weight: 600;
+    font-display: swap;
+  }
   pre[class*="language-"] {
 	overflow: auto;
 	position: relative;
