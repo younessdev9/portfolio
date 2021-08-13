@@ -6,10 +6,16 @@ import { sortByDate } from "utils/sortByDate";
 import Header from "components/Header";
 import Showcase from "components/Showcase";
 import MyLatestArticles from "components/LatestBlogCards";
+import SEO from "components/SEO";
 
 export default function Home({ posts }) {
   return (
     <>
+      <SEO
+        title="Home | Youness"
+        description="Hi there! I’m Youness Hassani a self-taught Full-stack JavaScript/TypeScript developer"
+        image="/homeFrame.png"
+      />
       <div>
         <Header />
         <Showcase />
