@@ -9,7 +9,7 @@ import Footer from "components/Footer";
 
 function MyApp({ Component, pageProps }) {
   const [open, setOpen] = useState(false);
-  const [theme, toggleTheme, componentMounted] = useDarkMode();
+  const [theme, toggleTheme] = useDarkMode();
   const themeMode = theme === "light" ? lightTheme : darkTheme;
 
   return (
