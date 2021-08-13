@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledMenu = styled.nav`
   display: flex;
@@ -6,7 +6,8 @@ export const StyledMenu = styled.nav`
   justify-content: center;
   background-color: gold;
   z-index: 1000;
-  transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(+100%)')};
+  transform: ${({ open = false }) =>
+    open ? "translateX(0)" : "translateX(+100%)"};
   height: 100vh;
   text-align: left;
   width: 100%;
@@ -37,9 +38,6 @@ export const StyledMenu = styled.nav`
         fill: white;
       }
     }
-  }
-  @media (max-width: 576px) {
-    width: 100%;
   }
 
   a {
@@ -88,19 +86,19 @@ export const StyledBurger = styled.button`
     transform-origin: 3px;
 
     :first-child {
-      transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
+      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
     }
 
     :nth-child(2) {
-      opacity: ${({ open }) => (open ? '0' : '1')};
-      transform: ${({ open }) => (open ? 'translateX(20px)' : 'translateX(0)')};
+      opacity: ${({ open }) => (open ? "0" : "1")};
+      transform: ${({ open }) => (open ? "translateX(20px)" : "translateX(0)")};
     }
 
     :nth-child(3) {
-      transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
+      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
   }
   @media only screen and (min-width: ${({ theme }) => theme.md}) {
-    display: none;
+    visibility: hidden;
   }
 `;
