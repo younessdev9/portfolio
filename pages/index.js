@@ -7,8 +7,10 @@ import Header from "components/Header";
 import Showcase from "components/Showcase";
 import MyLatestArticles from "components/LatestBlogCards";
 import SEO from "components/SEO";
+import { useDarkMode } from "components/hooks/useDarkMode";
 
 export default function Home({ posts }) {
+  const [, , componentMounted] = useDarkMode();
   return (
     <>
       <SEO
@@ -16,11 +18,13 @@ export default function Home({ posts }) {
         description="Hi there! I’m Youness Hassani a self-taught Full-stack JavaScript/TypeScript developer"
         image="/homeFrame.png"
       />
-      <div>
-        <Header />
-        <Showcase />
-        <MyLatestArticles posts={posts} />
-      </div>
+      {componentMounted && (
+        <div>
+          <Header />
+          <Showcase />
+          <MyLatestArticles posts={posts} />
+        </div>
+      )}
     </>
   );
 }
