@@ -9,7 +9,7 @@ import Footer from "components/Footer";
 
 function MyApp({ Component, pageProps }) {
   const [open, setOpen] = useState(false);
-  const [theme, toggleTheme] = useDarkMode();
+  const [theme, toggleTheme, componentMounted] = useDarkMode();
   const themeMode = theme === "light" ? lightTheme : darkTheme;
 
   return (
@@ -22,18 +22,22 @@ function MyApp({ Component, pageProps }) {
           open={open}
           setOpen={setOpen}
         />
-        <Menu
-          toggleTheme={toggleTheme}
-          theme={theme}
-          open={open}
-          setOpen={setOpen}
-        />
-        <Burger
-          toggleTheme={toggleTheme}
-          currentTheme={theme}
-          open={open}
-          setOpen={setOpen}
-        />
+        {componentMounted && (
+          <>
+            <Menu
+              toggleTheme={toggleTheme}
+              theme={theme}
+              open={open}
+              setOpen={setOpen}
+            />
+            <Burger
+              toggleTheme={toggleTheme}
+              currentTheme={theme}
+              open={open}
+              setOpen={setOpen}
+            />
+          </>
+        )}
         <main
           style={{
             minHeight: "84vh",
