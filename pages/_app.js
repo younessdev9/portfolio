@@ -19,7 +19,13 @@ function MyApp({ Component, pageProps }) {
           open={open}
           setOpen={setOpen}
         />
-        <Component {...pageProps} />
+        <main
+          style={{
+            minHeight: "84vh",
+          }}
+        >
+          <Component {...pageProps} />
+        </main>
         <Footer />
       </ThemeProvider>
     </>
