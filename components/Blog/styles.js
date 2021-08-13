@@ -41,7 +41,7 @@ export const MyBlogPage = styled.article`
     font-style: italic;
     margin-bottom: 2rem;
     border-bottom: solid 1px #555;
-    padding-bottom: 2rem;
+    padding: 1rem 0;
   }
 
   @media only screen and (max-width: ${({ theme }) => theme.xd}) {
