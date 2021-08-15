@@ -23,6 +23,8 @@ export default function SEO({ title, image, description }) {
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
         <meta property="twitter:image" content={`${siteUrl}${image}`} />
+        <meta name="twitter:creator" content="@younessdev" />
+        <meta name="twitter:site" content="@younessdev" />
       </Head>
     </>
   );

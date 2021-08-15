@@ -6,7 +6,7 @@ export default function contactPage() {
     <>
       <SEO
         title="Contact"
-        description="Hi there Welcome, I'd be really happy to get in touch with you feel free to contact me 😃😊"
+        description="Hi there Welcome to my website, I'd be really happy to get in touch with you feel free to contact me 😃😊"
         image="/homeFrame.png"
       />
       <Contact />

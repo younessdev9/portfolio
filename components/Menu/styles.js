@@ -55,6 +55,9 @@ export const StyledMenu = styled.nav`
       text-decoration: underline;
     }
   }
+  @media only screen and (min-width: ${({ theme }) => theme.md}) {
+    visibility: hidden;
+  }
 `;
 
 export const StyledBurger = styled.button`

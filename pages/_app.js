@@ -22,22 +22,20 @@ function MyApp({ Component, pageProps }) {
           open={open}
           setOpen={setOpen}
         />
-        {componentMounted && (
-          <>
-            <Menu
-              toggleTheme={toggleTheme}
-              theme={theme}
-              open={open}
-              setOpen={setOpen}
-            />
-            <Burger
-              toggleTheme={toggleTheme}
-              currentTheme={theme}
-              open={open}
-              setOpen={setOpen}
-            />
-          </>
-        )}
+        <>
+          <Menu
+            toggleTheme={toggleTheme}
+            theme={theme}
+            open={open}
+            setOpen={setOpen}
+          />
+          <Burger
+            toggleTheme={toggleTheme}
+            currentTheme={theme}
+            open={open}
+            setOpen={setOpen}
+          />
+        </>
         <main
           style={{
             minHeight: "84vh",
