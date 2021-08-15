@@ -12,7 +12,7 @@ export default function PostPage(props) {
     <>
       <SEO
         title={props.frontMatter.title}
-        pageDescription={props.frontMatter.excerpt}
+        description={props.frontMatter.excerpt}
         image={props.frontMatter.cover_image}
       />
       <BlogPage {...props} />

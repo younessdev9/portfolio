@@ -6,7 +6,7 @@ export default function AboutPage() {
     <>
       <SEO
         title="About"
-        pageDescription="Hi there! I’m Youness Hassani a Full-stack JavaScript/TypeScript developer,I love solving real-life problems with software"
+        description="Hi there! I’m Youness Hassani a Full-stack JavaScript/TypeScript developer,I love solving real-life problems with software"
         image="/homeFrame.png"
       />
       <About />
