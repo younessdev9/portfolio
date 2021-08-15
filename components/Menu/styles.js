@@ -6,6 +6,7 @@ export const StyledMenu = styled.nav`
   justify-content: center;
   background-color: gold;
   z-index: 1000;
+  visibility: ${({ open }) => (open ? "visible" : "hidden")};
   transform: ${({ open = false }) =>
     open ? "translateX(0)" : "translateX(+100%)"};
   height: 100vh;

@@ -93,9 +93,13 @@ export const MyProfile = styled.div`
   div {
     margin-bottom: 3rem;
   }
-  .my-image {
-    border-radius: 50%;
+  .img-wrapper {
+    position: relative;
     height: 20rem;
+    width: 20rem;
+    .my-image {
+      border-radius: 50%;
+    }
   }
 
   @media only screen and (max-width: ${({ theme }) => theme.md}) {

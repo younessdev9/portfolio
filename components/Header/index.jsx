@@ -38,8 +38,9 @@ export default function Header() {
       <MyProfile>
         <div className="img-wrapper">
           <Image
-            width={250}
-            height={225}
+            layout="fill"
+            objectFit="cover"
+            placeholder="blur"
             src={profile}
             alt="youness hassani"
             className="my-image"
