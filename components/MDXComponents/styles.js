@@ -26,14 +26,25 @@ export const MyParagraph = styled.p`
 export const MyOl = styled.ol`
   margin-left: 2rem;
   font-weight: 700;
+  margin-top: 3rem;
 `;
 export const MyUl = styled.ul`
   margin-left: 2rem;
   font-weight: 700;
+`;
+export const MyLink = styled.a`
+  color: ${({ theme }) => theme.blueColor};
+
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 export const HLight = styled.span`
   color: ${({ theme }) => theme.redColor};
 `;
 export const Quote = styled.div`
   border-left: 2px green solid;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: #faf0f090;
 `;

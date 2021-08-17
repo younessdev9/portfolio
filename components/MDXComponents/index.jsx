@@ -5,6 +5,7 @@ import {
   MyParagraph,
   MyOl,
   MyUl,
+  MyLink,
   HLight,
   Quote,
 } from "./styles";
@@ -23,6 +24,8 @@ const components = {
   ol: (props) => <MyOl {...props} />,
   // eslint-disable-next-line react/display-name
   ul: (props) => <MyUl {...props} />,
+  // eslint-disable-next-line react/display-name
+  a: (props) => <MyLink target="_blank" {...props} />,
   // eslint-disable-next-line react/display-name
   Code: (props) => <CodeBlock {...props} />,
   // eslint-disable-next-line react/display-name

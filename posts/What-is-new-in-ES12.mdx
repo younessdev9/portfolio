@@ -1,18 +1,245 @@
 ---
-title: "What is new in JavaScript ECMA 2021 (aka ES12)"
-date: "August 12, 2021"
-excerpt: "in this article we will take a look at the new feauture that has been added to the Javascript Languge in the year of 2021"
+title: "What is new in ECMAScript2021 (aka ES12)"
+date: "August 17, 2021"
+excerpt: "in this article, we will take a look at the new feature that has been added to the Javascript Language in the 2021"
 cover_image: "/postsImages/ecma2021.png"
 tags:
   - js
   - dev
 ---
 
-JavaScript is a living language that means new feautures get added to it, and it’s all over
-the place. From frontend application to backend application,Mobile apps, databases, platforms,robotics
-and much more..., you can do it all in one universal language called “JavaScript”. it has massive ecosystem and community behind it.
-and of course Javascript is eveloving and new feauture gets added to it every year
-ES2015 is the most extensive update to the language since it was first released in 1997.
-but we can't ignore the cool feauture that got added recently to that langue and therefore I'm sharing with you the new feauture that got added to it in the 2021
+JavaScript is a living language which means new features get added to the language its constantly evolving this
+process is managed by [tc39 committee](https://github.com/tc39), which is a group of delegates, from different large
+companies and organizations, that are interested in JavaScript language these delegates meet few times a year to
+decide which proposal will be advanced between the 5 stages of consideration, once a proposal reaches stage 4 it is
+deemed finished and added to the ECMAScript specification ready to use by JavaScript engines, therefore developers.
+ES2015 is the most extensive update to the language since it was first released in 1997.but we can't ignore
+the cool feauture that got added recently to that language which we going to see in this article without further ado let's get to it
 
 ## Logical Assignment Operators
+
+Now You can assign a value to a variable based on a logical operation. thanks to the new logical assignment
+operators - <HLight>&&=</HLight> , <HLight> ||= </HLight> and <HLight>??=</HLight> -
+it is a combination of logical operator with the assignment expression and a great example to understand that
+is these operator <HLight>+=</HLight>, <HLight>-=</HLight>, <HLight>\*=</HLight> they work similarly.
+now let's take it further and use some examples to get the idea of Logical Assignment Operators
+
+1. And and equals (&&=)
+
+<Code
+  code={` let fruit1 = "Banana";
+let friut2 = "apple"; 
+fruit1 &&= friut2; 
+// friut1 is now equal to "apple"
+// using the And and equals operator it's like saying 
+// if there is the friut1 then asign it to the value of friut2
+// in other world it like puting it in an if statment like so:
+if (fruit1) {
+  fruit1 = friut2
+}
+`}
+/>
+
+<Quote>
+  N.B : note that we are using <HLight> let </HLight>keyworld to decalre the
+  variable we can not use
+  <HLight> const </HLight> keyword here because it is unallowed to reasign values
+  to primitve types in JavaScript using the <HLight> const </HLight> keyword
+</Quote>
+
+2. Or or equals (||=)
+
+the <HLight> ||= </HLight> operator is kind of the opposite of the <HLight> &&= </HLight> operator, the
+diffrence is that the <HLight> ||= </HLight> operator makes the asignment only when the left operands is false let's
+see how that works:
+
+let use the same example as the previous one
+
+<Code
+  code={` let fruit1 = "Banana";
+let friut2 = "apple"; 
+fruit1 ||= friut2; 
+//the value of friut1 will be "apple" only if the current value of friut1 is a falsy value 
+// so for this to wok we have to do something like this 
+let fruit1 = "";
+let friut2 = "apple"; 
+fruit1 ||= friut2; // => this will return "apple" this will work and the fruit1 takes the value of friut2 because the fruit1 is a falsy value
+`}
+/>
+
+and to simailate this in an if statment it's like:
+
+<Code
+  code={` let fruit1 = "Banana";
+let friut2 = "apple"; 
+if(!fruit1) {
+  fruit1 = friut2;
+}
+`}
+/>
+
+3. Question question equals (??=)
+
+the <HLight> ??= </HLight> is kind of special one and to understand it we have we have to
+understand the <HLight> ?? </HLight> first which is called **Nullish coalescing operator**
+it works simailrly to <HLight> && </HLight> operator but it treats non Nullish/undefined values as truty values
+you might be like _what the heck does that mean_ 🙄😆 alright alright!! I'm gonna give you a simple example:
+
+<Code
+  code={` const mathsMark = 18; 
+mathsMark && console.log("You're good at maths 😀"); 
+// => You're good at maths 😀
+`}
+/>
+
+as you can see in the above example when executing this code it will prints to the
+console the message but wait what if the mark is 0 and we want to return that 0 from the expression
+there is no way you can do that with <HLight> && </HLight> unless you did some works around it
+and that's where the <HLight> ?? </HLight> **Nullish coalescing operator** comes
+in handy and this operator return 0 from the above expression
+
+<Code
+  code={` const mathsMark = 0; 
+mathsMark ?? console.log("You're good at maths 😀"); 
+// => 0 this will only print to the console the message only if mathsMark in null or undefined
+`}
+/>
+now that you know how the <HLight> ?? </HLight>
+_Nullish coalescing operator_ works let's get back to
+<HLight> ??= </HLight> operator and see how this operator works: so basiclly the
+asignment is going to work only if the left operand is null or undefined lets see
+an example:
+
+<Code
+  code={`let age = null ; 
+let newAge = 22;
+age ??= newAge // => 22 this will work and return 22 because age is null 
+// the same applies if the value of age is undefined
+`}
+/>
+
+so it like puting in an if statment like so:
+
+<Code
+  code={`let age = null ; 
+let newAge = 22;
+if (age === null || age === undefined) {
+  age = newAge
+}
+`}
+/>
+
+## String.prototype.replaceAll()
+
+this method is useful when you're trying to replace words or sentences in JavaScript String, but globaly meaning that
+you want to replace all the word in the whole sting with a new one and this what <HLight> String.prototype.replace() </HLight>
+couldn't do because this method replace only the first word it find in the String which not much useful if we are
+trying to replace a more than 1 words in a String.
+
+we had to do something like:
+
+<Code
+  code={`const message = "Thank you for being awesome we just love awesome people like you"; 
+const newMessage = message.replace(/awesome/g, "kind")
+`}
+/>
+
+we had to use a global regular expression. on that String which can lead to a security vulnerability if we get that value
+from user input
+
+now in ES12 we can do just like that using Sring instead of Regex it would look like this:
+
+<Code
+  code={`const message = "Thank you for being awesome we just love awesome people like you"; 
+const newMessage = message.replaceAll("awesome", "kind")
+console.log(newMessage) // Thank you for being kind we just love kind people like you
+`}
+/>
+
+## Numeric Separators
+
+this new feauture it's just for numbers readability, which is pretty nice feature to have now you can add an underscore
+to numbers it doesn't effect the number value or performance by anyhow
+
+<Code
+  code={`// the numbers are reprented like so in JavaScript
+const bigNumber = 3958937294; 
+// thanks to this new feauture now we can separate them by an underscore for readability
+const newMessage = 3_958_937_294
+// we can also do it on decimals 
+const balance = 3_942_840.949_28
+`}
+/>
+
+<Quote>
+  N.B : note that you can use it to separete numbers by 3 or 2 or whatever it
+  not reqiured to anly separate numbers by 3 digits
+</Quote>
+
+## Promise.any()
+
+this new feauture it’s like a combination between <HLight> Promise.race() </HLight> and <HLight> Promise.allSettled() </HLight>
+where we can run a list of promises and it’s going to stop as soon as one of them fulfills but as
+supposed to promise.race() which going to fail imidiatly if one of theme rejects it’s going to continue on if one of them fails if all
+of them fails <HLight> Promise.any() </HLight> will return what's called an AggregateError (a new subclass of Error)
+which tells us all of the problems that happend with each Promise
+
+<Code
+  code={`Promise.any([
+  fetch('https://v8.dev/').then(() => 'home'),
+  fetch('https://v8.dev/blog').then(() => 'blog'),
+]).then((value) => {
+  // Any of the promises was fulfilled.
+  console.log(value);
+}).catch((error) => {
+  // in case all of the promises rejected this will return AggregateError
+  console.log(error);
+});
+`}
+/>
+
+<Quote>
+  N.B : note that if you try to run this code in your browser it will not work
+  due to CORS, you can try this in nodejs using node-fetch module
+</Quote>
+
+so <HLight> Promise.any() </HLight> is useful when you want to run several promises all in the same time and you want to
+ignore rejection unless all of them rejects and you're intersted in only one of them to resolve
+
+## WeakRef
+
+in other languages like C or C++ you'd have to manage memory manually but in JavaScript that happens automatically it allocates memory when objects are
+created and frees it when they are not used anymore (garbage collection). and the use case of it is
+sometimes you want to garbage collect an object and frees up the memory, for example, we might wanna have a cache that you want to fillup with large Objects
+and you want the garbage collector to clear it up more frequently just in case the cache fillup too much
+and here where WeakRef comes in handy let's see an example to understand that even more
+
+<Code
+  code={`const weakProductsCache = new WeakRef({})
+const bigProductObject = {
+  name : "the product name",
+  productDescrption: "A really long description for this product"
+  // and so many more info
+}
+// and if you want to access properties in this Object
+// we can't just acces theme diredctly 
+// we have to use a special method like so
+weakProductsCache.deref()["bigProductObjectInfos"] = bigProductObject
+console.log(weakProductsCache.deref()) 
+// => { bigProductObjectInfos : { name : "the product name", productDescrption: "A really long description for this product"}}
+`}
+/>
+now this is going to remain in the weakProductsCache until the garbage collector
+wants to get rid of it that could happen anytime there is no way for us to control
+when the garbage collector runs, we can't control when this going to happen. this
+feature is the most complicated feature of all the features we've talked about. it
+is intended for low-level use cases you probably won't be messing around with it
+unless you're working on a library or something that is really complicated. if you
+want to know more about it you can check the proposal via this [Link](https://github.com/tc39/proposal-weakrefs).
+
+other proposals:
+
+- [Logical Assignment Operators](https://github.com/tc39/proposal-logical-assignment).
+- [Numeric Separators](https://github.com/tc39/proposal-numeric-separator).
+- [String.prototype.replaceAll](https://github.com/tc39/proposal-string-replaceall).
+- [Promise.any](https://github.com/tc39/proposal-promise-any).
