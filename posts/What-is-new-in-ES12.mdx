@@ -8,13 +8,14 @@ tags:
   - dev
 ---
 
-JavaScript is a living language which means new features get added to the language its constantly evolving this
+JavaScript is a living language which means new features get added to the language every year, its constantly evolving this
 process is managed by [tc39 committee](https://github.com/tc39), which is a group of delegates, from different large
 companies and organizations, that are interested in JavaScript language these delegates meet few times a year to
 decide which proposal will be advanced between the 5 stages of consideration, once a proposal reaches stage 4 it is
 deemed finished and added to the ECMAScript specification ready to use by JavaScript engines, therefore developers.
-ES2015 is the most extensive update to the language since it was first released in 1997.but we can't ignore
-the cool feauture that got added recently to that language which we going to see in this article without further ado let's get to it
+ES2015 is the most extensive update to the language since it was first released in 1997. but we can't ignore
+the cool feauture that got added to it since then. and in this articel we're going to see the most recent
+feauture without further ado let's get to it
 
 ## Logical Assignment Operators
 
@@ -50,7 +51,7 @@ if (fruit1) {
 2. Or or equals (||=)
 
 the <HLight> ||= </HLight> operator is kind of the opposite of the <HLight> &&= </HLight> operator, the
-diffrence is that the <HLight> ||= </HLight> operator makes the asignment only when the left operands is false let's
+diffrence is that the <HLight> ||= </HLight> operator makes the asignment only when the left operand is false let's
 see how that works:
 
 let use the same example as the previous one
@@ -80,8 +81,8 @@ if(!fruit1) {
 
 3. Question question equals (??=)
 
-the <HLight> ??= </HLight> is kind of special one and to understand it we have we have to
-understand the <HLight> ?? </HLight> first which is called **Nullish coalescing operator**
+the <HLight> ??= </HLight> is kind of special one and to understand it we have to
+understand the <HLight> ?? </HLight> operator first which is called **Nullish coalescing operator**
 it works simailrly to <HLight> && </HLight> operator but it treats non Nullish/undefined values as truty values
 you might be like _what the heck does that mean_ 🙄😆 alright alright!! I'm gonna give you a simple example:
 
@@ -94,21 +95,25 @@ mathsMark && console.log("You're good at maths 😀");
 
 as you can see in the above example when executing this code it will prints to the
 console the message but wait what if the mark is 0 and we want to return that 0 from the expression
-there is no way you can do that with <HLight> && </HLight> unless you did some works around it
-and that's where the <HLight> ?? </HLight> **Nullish coalescing operator** comes
-in handy and this operator return 0 from the above expression
+there is no way you can do that with <HLight> && </HLight> operator unless you did some works around it because the <HLight> && </HLight> operator will treat
+0 as false and that's where the <HLight> ?? </HLight> **Nullish coalescing operator** comes
+in handy and this operator return 0 from the bellew expression
 
 <Code
   code={` const mathsMark = 0; 
 mathsMark ?? console.log("You're good at maths 😀"); 
-// => 0 this will only print to the console the message only if mathsMark in null or undefined
+// => 0 
 `}
 />
+this code will print to the console the message only if mathsMark in <HLight>
+  {" "}
+  null{" "}
+</HLight>
+or <HLight> undefined </HLight>
+
 now that you know how the <HLight> ?? </HLight>
-_Nullish coalescing operator_ works let's get back to
-<HLight> ??= </HLight> operator and see how this operator works: so basiclly the
-asignment is going to work only if the left operand is null or undefined lets see
-an example:
+_Nullish coalescing operator_ works let's get back to <HLight> ??= </HLight> operator and see how this operator
+works: so basiclly the asignment is going to work only if the left operand is null or undefined lets see an example:
 
 <Code
   code={`let age = null ; 
@@ -129,12 +134,15 @@ if (age === null || age === undefined) {
 `}
 />
 
+personally, I find the last two operators ||= and ??= the most useful because most of the time you'd have to
+assign a value to a variable if it's not yet assigned a value
+
 ## String.prototype.replaceAll()
 
-this method is useful when you're trying to replace words or sentences in JavaScript String, but globaly meaning that
-you want to replace all the word in the whole sting with a new one and this what <HLight> String.prototype.replace() </HLight>
+this method is useful when you're trying to replace words or sentences in JavaScript String globaly meaning that
+you want to replace all the word in the whole String with a new one and this what <HLight> String.prototype.replace() </HLight>
 couldn't do because this method replace only the first word it find in the String which not much useful if we are
-trying to replace a more than 1 words in a String.
+trying to replace more than 1 words in a String.
 
 we had to do something like:
 
@@ -180,7 +188,7 @@ const balance = 3_942_840.949_28
 
 this new feauture it’s like a combination between <HLight> Promise.race() </HLight> and <HLight> Promise.allSettled() </HLight>
 where we can run a list of promises and it’s going to stop as soon as one of them fulfills but as
-supposed to promise.race() which going to fail imidiatly if one of theme rejects it’s going to continue on if one of them fails if all
+supposed to promise.race() which going to fail imidiatly if one of theme rejects it’s going to continue on if one of them fails. if all
 of them fails <HLight> Promise.any() </HLight> will return what's called an AggregateError (a new subclass of Error)
 which tells us all of the problems that happend with each Promise
 
