@@ -8,12 +8,14 @@ import BlogPage from "components/Blog/BlogPage";
 import SEO from "components/SEO";
 
 export default function PostPage(props) {
+  console.log({ props });
   return (
     <>
       <SEO
         title={props.frontMatter.title}
         description={props.frontMatter.excerpt}
         image={props.frontMatter.cover_image}
+        site={`/blog/${props.slug}`}
       />
       <BlogPage {...props} />
     </>

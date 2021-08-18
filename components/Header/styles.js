@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MyHeader = styled.header`
   width: 100%;
-  min-height: 60rem;
+  min-height: 50rem;
   padding: 1rem;
   padding-top: 6rem;
   display: flex;
@@ -47,6 +47,7 @@ export const MyHeader = styled.header`
         border-bottom: solid 0.4rem #facc15;
         color: white;
         text-align: center;
+        padding-bottom: 1rem;
       }
     }
   }

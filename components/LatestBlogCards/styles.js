@@ -15,6 +15,7 @@ export const MyLatestArticles = styled.article`
     border-bottom: solid 0.4rem ${({ theme }) => theme.yellowColor};
     margin-bottom: 4rem;
     color: ${({ theme }) => theme.darkLightPrimary};
+    padding: 1rem;
   }
 
   .articles {

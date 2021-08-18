@@ -18,7 +18,7 @@ export const MyHeading3 = styled.h3`
 export const MyParagraph = styled.p`
   margin-bottom: 2rem;
   font-size: 1.9rem;
-  color: #000000d6;
+  color: ${({ theme }) => theme.textColor};
 
   @media only screen and (max-width: ${({ theme }) => theme.xd}) {
     font-size: 1.5rem;
@@ -47,5 +47,5 @@ export const Quote = styled.div`
   border-left: 2px green solid;
   padding: 1rem;
   margin: 1rem 0;
-  background-color: #faf0f090;
+  background-color: ${({ theme }) => theme.bgQuote};
 `;

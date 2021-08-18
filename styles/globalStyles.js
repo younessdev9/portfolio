@@ -13,6 +13,8 @@ export const lightTheme = {
   CardParagraphColor: "#343236",
   excerptColor: "#585858",
   orangeColor: "#fd9170",
+  textColor: "#000000d6",
+  bgQuote: "#faf0f090",
   //breakpoints
   sm: "500px",
   xd: "730px",
@@ -31,6 +33,8 @@ export const darkTheme = {
   CardParagraphColor: "#F3F3F3",
   excerptColor: "#F3F3F3",
   orangeColor: "#fd9170",
+  textColor: "#FFFFFF",
+  bgQuote: "#2b2b2b",
   //breakpoints
   sm: "500px",
   xd: "730px",

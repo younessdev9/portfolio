@@ -14,6 +14,7 @@ export default function BlogPage({ posts }) {
         title="Blog"
         description="Welcome to Youness blog, where I do talk about JavaScript & TypeScript tips, practices for helping you get better"
         image="/homeFrame.png"
+        site="/blog"
       />
       <Blog posts={posts} />
     </>
