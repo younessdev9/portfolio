@@ -18,6 +18,7 @@ export const MyHeading3 = styled.h3`
 export const MyParagraph = styled.p`
   margin-bottom: 2rem;
   font-size: 1.9rem;
+  color: #000000d6;
 
   @media only screen and (max-width: ${({ theme }) => theme.xd}) {
     font-size: 1.5rem;

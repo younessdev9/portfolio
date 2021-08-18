@@ -50,7 +50,6 @@ export const MyCard = styled.div`
     margin-right: 2rem;
   }
   p {
-    font-family: "Wotfard";
     color: ${({ theme }) => theme.CardParagraphColor};
     line-height: 1.8;
     margin-top: 1.5rem;

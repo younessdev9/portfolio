@@ -237,6 +237,7 @@ console.log(weakProductsCache.deref())
 // => { bigProductObjectInfos : { name : "the product name", productDescrption: "A really long description for this product"}}
 `}
 />
+
 now this is going to remain in the weakProductsCache until the garbage collector
 wants to get rid of it that could happen anytime there is no way for us to control
 when the garbage collector runs, we can't control when this going to happen. this

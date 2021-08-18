@@ -13,7 +13,7 @@ export default function Home({ posts }) {
     <>
       <SEO
         title="Home | Youness"
-        pageDescription="Hi there! I’m Youness Hassani a Full-stack JavaScript/TypeScript developer,I love solving real-life problems with software"
+        description="Hi there! I’m Youness Hassani a Full-stack JavaScript/TypeScript developer,I love solving real-life problems with software"
         image="/homeFrame.png"
       />
       <div>

@@ -54,7 +54,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   body {
     font-size: 1.7rem;
-    font-family: 'Inter', sans-serif;
+    font-family: -apple-system,Ubuntu, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     transition: all .3s ease-out;
     transition-property: background-color;
     background-color: ${(props) =>
@@ -65,51 +65,6 @@ export const GlobalStyles = createGlobalStyle`
       color : inherit;
     }
   }
-  @font-face {
-      font-family: 'Wotfard';
-      src: url('/fonts/wotfard-regular-webfont.woff2') format('woff2'),
-           url('/fonts/wotfard-regular-webfont.woff') format('woff');
-           font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Wotfard';
-    src: url('/fonts/wotfard-medium-webfont.woff2') format('woff2'),
-         url('/fonts/wotfard-medium-webfont.woff') format('woff');
-    font-style: medium;
-    font-weight: 500;
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'Wotfard';
-    src: url('/fonts/wotfard-semibold-webfont.woff2') format('woff2'),
-         url('/fonts/wotfard-semibold-webfont.woff') format('woff');
-    font-weight: 600;
-    font-display: swap;
-}
-  /* @font-face {
-    font-family: "Wotfard";
-    src: url("/fonts/Wotfard-Regular.ttf");
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Wotfard";
-    src: url("/fonts/Wotfard-Medium.ttf");
-    font-style: medium;
-    font-weight: 500;
-    font-display: swap;
-  }
-  @font-face {
-    font-family: "Wotfard";
-    src: url("/fonts/Wotfard-SemiBold.ttf");
-    font-weight: 600;
-    font-display: swap;
-  } */
   pre[class*="language-"] {
 	overflow: auto;
 	position: relative;

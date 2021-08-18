@@ -6,7 +6,6 @@ export const MyBlog = styled.article`
   align-items: center;
   padding: 1rem 1rem 4rem;
   h1 {
-    font-family: "Wotfard";
     text-align: left;
     margin-top: 2rem;
   }
@@ -17,7 +16,6 @@ export const MyBlogPage = styled.article`
   line-height: 1.8;
   margin: 1rem auto;
   padding: 1rem 1rem 4rem;
-  font-family: "Wotfard";
 
   .blog-header {
     display: flex;
