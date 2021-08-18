@@ -32,7 +32,6 @@ export const MyHeader = styled.header`
       span {
         font-size: 1.7rem;
         line-height: 2;
-        font-family: "Wotfard";
         color: white;
       }
     }

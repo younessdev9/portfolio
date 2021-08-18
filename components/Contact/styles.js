@@ -4,7 +4,6 @@ export const MyContact = styled.div`
   max-width: 70rem;
   margin: auto;
   padding: 1rem;
-  font-family: "Wotfard";
   padding-top: 5rem;
   h1 {
   }

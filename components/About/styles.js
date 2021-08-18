@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const MyAbout = styled.div`
-  font-family: "Wotfard";
   line-height: 1.8;
   padding: 3rem;
   max-width: 80rem;

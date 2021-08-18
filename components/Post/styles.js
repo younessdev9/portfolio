@@ -6,7 +6,6 @@ export const MyPost = styled.div`
   padding: 1rem;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.07);
   border-radius: 0.8rem;
-  font-family: "Wotfard";
 
   .image-container {
     width: 100%;
