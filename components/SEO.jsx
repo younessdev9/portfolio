@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export default function SEO({ title, image, description }) {
+export default function SEO({ title, image, description, site = "/" }) {
   const siteUrl = "https://www.unessdev.com";
   return (
     <>
@@ -12,7 +12,7 @@ export default function SEO({ title, image, description }) {
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={siteUrl} />
+        <meta property="og:url" content={`${siteUrl}${site}`} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={`${siteUrl}${image}`} />
