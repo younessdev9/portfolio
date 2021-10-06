@@ -16,6 +16,7 @@ export default function SEO({ title, image, description, site = "/" }) {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={`${siteUrl}${image}`} />
+        <meta name="author" content="@"></meta>
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
